@@ -1,20 +1,18 @@
 const express = require("express");
-const parser = require("body-parser");
 const path = require("path");
-const { apiRouter } = require("./api/index");
+const parse = require("body-parser");
+
+const { apiRouter } = require("./api");
 
 const app = express();
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8081;
 const CLIENT_PATH = path.join(__dirname, "../client/dist");
 
 app.use(express.static(CLIENT_PATH));
-app.use(parser.json());
+app.use(parse.json());
 app.use("/api", apiRouter);
-
 
 app.listen(PORT, () => {
   console.log(`Listening on :${PORT} 🚀`);
 });
-
-module.exports.app = app;
