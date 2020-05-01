@@ -7,6 +7,12 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
+Run server with VS Code Debugger
+Entry point --> server/index.js
+```
+
+### Compiles and hot-reloads for development
+```
 npm run serve
 ```
 
