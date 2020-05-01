@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <!-- <Stats v-bind:stats="stats"/> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from './components/layout/Header';
+// import Stats from './components/Stats';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    // Stats
+  },
+  data() {
+    return {
+      stats: [
+        {
+          id: 1,
+          account: 'Hines0106',
+          platform: 'Xbox',
+          hours: 1100,
+          kd: 1.5,
+          wl: 2.4,
+        },
+      ]
+    }
   }
 }
 </script>
