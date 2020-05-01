@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <Header />
-    <!-- <Stats v-bind:stats="stats"/> -->
+    <Stats v-bind:stats="stats"/>
   </div>
 </template>
 
 <script>
 import Header from './components/layout/Header';
-// import Stats from './components/Stats';
+import Stats from './components/Stats';
 export default {
   name: 'App',
   components: {
     Header,
-    // Stats
+    Stats
   },
   data() {
     return {
