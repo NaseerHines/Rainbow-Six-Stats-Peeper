@@ -8,14 +8,13 @@ CREATE DATABASE siege;
 
 USE siege;
 
-CREATE TABLE `Account`
-(
-  `accountId` int PRIMARY KEY AUTO_INCREMENT,
-  `username` varchar
-(55) UNIQUE,
-  `platform` varchar
-(4) NOT NULL,
-  `kdRatio` int NOT NULL,
-  `Ratio` int NOT NULL,
-  `playtime` int NOT NULL,
+CREATE TABLE `account` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`username` VARCHAR(250) NOT NULL,
+	`platform` VARCHAR(15),
+	`hours` INT,
+	`kdratio` INT,
+	`wlratio` INT,
+
+	PRIMARY KEY(`id`)
 );
